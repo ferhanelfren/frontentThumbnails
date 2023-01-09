@@ -1,0 +1,82 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ContentreeUploadComponent/1.0.0": {
+        "dependencies": {
+          "AngularJS.Animate": "1.8.2",
+          "AngularJS.Core": "1.8.2",
+          "AngularJS.Route": "1.8.2",
+          "AngularJS.Sanitize": "1.8.2",
+          "angularjs": "1.8.2"
+        },
+        "runtime": {
+          "ContentreeUploadComponent.dll": {}
+        }
+      },
+      "angularjs/1.8.2": {},
+      "AngularJS.Animate/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
+      "AngularJS.Core/1.8.2": {},
+      "AngularJS.Route/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
+      "AngularJS.Sanitize/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ContentreeUploadComponent/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "angularjs/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PNDvzvETjTfl3JqHTuPH8XbKOLQRXrHp613vGMpllUIy2YL42tK8YIdbeBaMZxK+8VlUMShuXMVkgiH95S12rQ==",
+      "path": "angularjs/1.8.2",
+      "hashPath": "angularjs.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Animate/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vCCZMrTqwHS83XLJ4u482NHwfPaDVvs4a7rV3SW5hoDnZnh7qZM9CNOQld1IXpNjNIrF9pjcz3ZeWWH5tu7c5Q==",
+      "path": "angularjs.animate/1.8.2",
+      "hashPath": "angularjs.animate.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Core/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-XqWsLLPPF8KDFYbVPbtpbae1claPLcjyxZgYThdXQri3I2O8SDdMzNafnhIi9nGgg3X6zsu1W0Qj0u5p1wr5mA==",
+      "path": "angularjs.core/1.8.2",
+      "hashPath": "angularjs.core.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Route/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-h/CSlk2D4FFvGz5vvJeziSFBtodQ92ipfeqVsqK4i8Jq5MxEqOO35ebi9wK27FMD9vS1NS4MNseOPkp9jgVtsA==",
+      "path": "angularjs.route/1.8.2",
+      "hashPath": "angularjs.route.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Sanitize/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-DpWPMwWlBcxq1+fo24AyzW0/X+A9L5UpCVIWZ1hBodkKbikLZPOPLtfag8WTZci++S+qaPVuPKICbzQVtSuAIg==",
+      "path": "angularjs.sanitize/1.8.2",
+      "hashPath": "angularjs.sanitize.1.8.2.nupkg.sha512"
+    }
+  }
+}

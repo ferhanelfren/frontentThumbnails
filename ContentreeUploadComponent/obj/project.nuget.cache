@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "MwzFwWwN8PgbAesnkifPlcnLje1i0yBakYPQHr3ilur/d87KjzhdWSPbRNbwglAMCv2/pByGxR7raa/zPWpBPA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ferha\\source\\repos\\ContentreeUploadComponent\\ContentreeUploadComponent\\ContentreeUploadComponent.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs\\1.8.2\\angularjs.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.animate\\1.8.2\\angularjs.animate.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.core\\1.8.2\\angularjs.core.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.route\\1.8.2\\angularjs.route.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.sanitize\\1.8.2\\angularjs.sanitize.1.8.2.nupkg.sha512"
+  ],
+  "logs": []
+}
