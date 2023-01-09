@@ -5,4 +5,119 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<style>
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+    }
+
+    .activateHover:hover{
+        outline:2px solid black;
+    }
+
+    .butttonprimary{
+        background-color: #0047ab;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+        .butttonprimary:hover{
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+
+    .buttondanger{
+        background-color: red;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+    }
+
+        .buttondanger:hover{
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+</style>
+
+
+
+
+
+
+
+@*OPTION #2*@
+<div class="container">
+    <div class="landing-page__status-string">
+        <div><span>Please, add description to each uploaded Case Study</span></div>
+    </div>
+    <table class="table upload-results">
+        <thead>
+             <tr>
+                <td>Video</td>
+                <td>Title/Description</td>
+                <td>Actions</td>
+             </tr>
+        </thead>
+        <tbody ng-repeat="cs in vm.videoCsUploadedColl">
+            <tr>
+                <td>
+                    <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:300px; height:200px;"></video>
+                    <div>
+                        <span style="display:block; margin-bottom:0px;">Filename</span>
+                        <span style="top:-50px">FILENAME HERE.</span>
+                    </div>
+                </td>
+                <td>
+                    <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
+                        <span style="display:block;">Title:</span>
+                        <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
+                    </div>
+                    <br />
+
+                    <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
+                        <span style="display:block;">Description:</span>
+                        <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
+                    </div>
+                    <br />
+
+                    <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
+                        <span style="display:block;">Canonical Url:</span>
+                        <input ng-model="cs.canonicalUrl" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" />
+                    </div>
+                </td>
+                <td>
+                    @*BUTTONS*@
+                    <div style="width:fit-content;">
+                        <div style="margin-top:40%; margin-left:50px;">
+                            <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)">Save</button>
+                            <button type="button" class="buttondanger rounded" ng-disabled="!vm.isRemovalAllowed" ng-click="vm.delete(cs)">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    @*THUMBNAI*@
+                    <div class="container">
+                        <span style="display:block;">Thumbnail:</span>
+                        <span style="font-size:10pt;">
+                            Select or upload a picture that shows what's in your video.
+                            A good thumbnail stands out and draws viewers' attention.
+                        </span>
+                        @*YOUR THUMBNAIL HERE.*@
+                        <div style="width:100%">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
