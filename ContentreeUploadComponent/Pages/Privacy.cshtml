@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Privacy Policy";
 }
-<h1>@ViewData["Title"]</h1>
+
 
 <style>
     input:focus, textarea:focus, select:focus {
@@ -48,140 +48,68 @@
 </style>
 
 
+<div class="mx-auto ">
 
-@*option #1*@
-<div class="container" ng-repeat="cs in vm.videoCsUploadedColl">
+    <div class="mx-auto rounded shadow" style="width:70%; height:auto; background-color: white; border: 2px solid  #379237;">
+        <div class="container" style="margin-top:15px;">
+            <span style="">FILENAME HERE.</span>
+        </div>
+        <div class="container">
+            <hr style=" border-top: 1px solid #379237;" />
+        </div>
+        <div class="row" style="width:100%; height:100%; padding:5px;">
+            <div class="col container ">
 
-    <div class="row">
+                <div class="container" style="margin-top:10px;">
+                    <h4><strong>Details</strong></h4>
+                </div>
 
+                <div class="container">
+                    <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                        <span style="display:block;">Title:</span>
+                        <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
+                        <br />
+                    </div>
+                </div>
+                <br />
+                <div class="container">
+                    <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                        <span style="display:block;">Description:</span>
+                        <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
+                        <br />
+                    </div>
+                </div>
+                <br />
 
-        <div class="col" style="">
-            <div class="landing-page__status-string" style="text-align:center;">
-                <div><span><strong>Video</strong></span></div>
+                <div class="container">
+                    @*THUMBNAI*@
+                    <span style="display:block;">Thumbnail:</span>
+                    <span style="font-size:8pt;">
+                        Select or upload a picture that shows what's in your video.
+                        A good thumbnail stands out and draws viewers' attention.
+                    </span>
+                    @*YOUR THUMBNAIL HERE.*@
+                    <div style="width:100%">
+                    </div>
+                </div>
             </div>
-            <div style="text-align:center;">
-                <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:300px; height:200px;"></video>
-            </div>
-            <div>
-                <div style="margin-left:55px; margin-top:5px;">
+            <div class="col">
+                <div style="text-align:center;">
+                    <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:300px; height:200px;"></video>
+                </div>
+                <div style="margin-left:60px; margin-top:5px;">
                     <span style="display:block; margin-bottom:0px;">Filename</span>
-                    <span style="top:-50px">FILENAME HERE.</span>
+                    <span style="top:-50px"><strong>FILENAME HERE</strong></span>
                 </div>
             </div>
         </div>
-        <div class="col">
-            <div class="landing-page__status-string" style="text-align:center;">
-                <div><span><strong>Title/Description</strong></span></div>
-            </div>
-            <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
-                <span style="display:block;">Title:</span>
-                <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
-            </div>
-            <br />
-
-            <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
-                <span style="display:block;">Description:</span>
-                <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
-            </div>
-            <br />
-
-            <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
-                <span style="display:block;">Canonical Url:</span>
-                <input ng-model="cs.canonicalUrl" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" />
-            </div>
+        <div class="container">
+            <hr style=" border-top: 1px solid #379237;" />
         </div>
-        @*BUTTONS*@
-        <div class="col" style="text-align:center; width:fit-content;">
-            <div class="landing-page__status-string">
-                <div><span><strong>Actions</strong></span></div>
-            </div>
-            <div style="margin-top:20%">
-                <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)">Save</button>
-                <button type="button" class="buttondanger rounded" ng-disabled="!vm.isRemovalAllowed" ng-click="vm.delete(cs)">Delete</button>
-            </div>
+        <div class="container" style="text-align:right; padding-right: 40px;">
+            <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)" style="font-size:12pt;">SAVE</button>
         </div>
-    </div>
-    <br />
-    <hr />
-    @*THUMBNAI*@
-    <div class="container">
-        <span style="display:block;">Thumbnail:</span>
-        <span style="font-size:10pt;">
-            Select or upload a picture that shows what's in your video.
-            A good thumbnail stands out and draws viewers' attention.
-        </span>
-        @*YOUR THUMBNAIL HERE.*@
-        <div style="width:100%">
-        </div>
+        <br />
     </div>
 
-</div>
-
-@*OPTION #2*@
-<div class="container">
-    <div class="landing-page__status-string">
-        <div><span>Please, add description to each uploaded Case Study</span></div>
-    </div>
-    <table class="table upload-results">
-        <thead>
-             <tr>
-                <td>Video</td>
-                <td>Title/Description</td>
-                <td>Actions</td>
-             </tr>
-        </thead>
-        <tbody ng-repeat="cs in vm.videoCsUploadedColl">
-            <tr>
-                <td>
-                    <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:300px; height:200px;"></video>
-                    <div>
-                        <span style="display:block; margin-bottom:0px;">Filename</span>
-                        <span style="top:-50px">FILENAME HERE.</span>
-                    </div>
-                </td>
-                <td>
-                    <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
-                        <span style="display:block;">Title:</span>
-                        <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
-                    </div>
-                    <br />
-
-                    <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
-                        <span style="display:block;">Description:</span>
-                        <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
-                    </div>
-                    <br />
-
-                    <div class="rounded activateHover" style="border:1px solid gray; width:100%; height:fit-content; padding:10px; padding-left: 20px;">
-                        <span style="display:block;">Canonical Url:</span>
-                        <input ng-model="cs.canonicalUrl" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" />
-                    </div>
-                </td>
-                <td>
-                    @*BUTTONS*@
-                    <div style="width:fit-content;">
-                        <div style="margin-top:40%; margin-left:50px;">
-                            <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)">Save</button>
-                            <button type="button" class="buttondanger rounded" ng-disabled="!vm.isRemovalAllowed" ng-click="vm.delete(cs)">Delete</button>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    @*THUMBNAI*@
-                    <div class="container">
-                        <span style="display:block;">Thumbnail:</span>
-                        <span style="font-size:10pt;">
-                            Select or upload a picture that shows what's in your video.
-                            A good thumbnail stands out and draws viewers' attention.
-                        </span>
-                        @*YOUR THUMBNAIL HERE.*@
-                        <div style="width:100%">
-                        </div>
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
 </div>
