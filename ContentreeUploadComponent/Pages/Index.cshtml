@@ -14,7 +14,7 @@
     }
 
     .butttonprimary{
-        background-color: #0047ab;
+        background-color: #0077b6;
         border: none;
         color: white;
         padding: 10px 25px;
@@ -44,66 +44,306 @@
             opacity: 0.9;
             transition: 0.3s;
         }
+.topnav {
+  overflow: hidden;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.topnav-right {
+  float: right;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  padding-top: 100px; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; 
+  overflow: auto;
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #6fd404;
+  width: 70%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 </style>
 
 
-<div class="" style="width:100%; height:100%;">
-    <div class="" style="margin-top:15px;">
-        <span style="font-size:20pt;"><strong>FILENAME HERE.</strong></span>
-    </div>
-    <div class="row">
-        <div class="col">
-            <div class="container" style="margin-top:10px;">
-                <h4><strong>Details</strong></h4>
-            </div>
-            <div class="container">
-                <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
-                    <span style="display:block; font-size:14pt;">Title:</span>
-                    <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
-                    <br />
-                </div>
-            </div>
-            <br />
-            <div class="container">
-                <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
-                    <span style="display:block; font-size:14pt;">Description:</span>
-                    <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
-                    <br />
-                </div>
-            </div>
-            <br />
-            <div class="container">
-                @*THUMBNAI*@
-                <span style="display:block;">Thumbnail:</span>
-                <span style="font-size:8pt;">
-                    Select or upload a picture that shows what's in your video.
-                    A good thumbnail stands out and draws viewers' attention.
-                </span>
-                @*YOUR THUMBNAIL HERE.*@
-                <div style="width:100%">
 
-                </div>
-            </div>
-        </div>
-        <div class="col" style="">
-            <div style="padding-top: 20px; width:100%;">
-                <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:100%; height:350px;"></video>
-            </div>
-            <div style="margin-top:5px; width:100%;">
-                <span style="display:block; margin-bottom:0px;">Filename</span>
-                <span style="top:-50px"><strong>FILENAME HERE</strong></span>
-            </div>
+
+<header style="width:100%;">
+    <div class="topnav">
+        <div class="topnav-right" style="margin-top:20px;">
+@*            <div>
+                <img src="~/images/videocam-icon.svg" style="transform: scaleX(-1); cursor:pointer;"  />
+            </div>*@
+            <button id="myBtn" class="butttonprimary">
+                <img src="~/images/upload.svg" /> Upload Video
+            </button>
             <br />
         </div>
-       <br />
-       <br />
-       <hr />
-        <div class="container" style="text-align:right; padding-right: 40px;">
-            <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)" style="font-size:12pt;">SAVE</button>
-        </div>
-       
     </div>
+</header>
+<body style="width:100%; height:auto;">
+    <table class="table" style="width:100%; height:auto;">
+        <thead>
+            <tr>
+                <td>Video</td>
+                <td>Title Description</td>
+                <td>Action</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="cs in vm.videoCsUploadedColl">
+                <td>
+                    <div style="">
+                        <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:70%; height:70%;"></video>
+                    </div>
+                    <div style="margin-top:5px;">
+                        <span style="display:block; margin-bottom:0px;">Filename</span>
+                        <span style="top:-50px"><strong>FILENAME HERE</strong></span>
+                    </div>
+                </td>
+                <td>
+                    <div class="container">
+                        <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                            <span style="display:block; font-size:14pt;">Title:</span>
+                            <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
+                            <br />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="container">
+                        <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                            <span style="display:block; font-size:14pt;">Description:</span>
+                            <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
+                            <br />
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div class="container" style="">
+                        <div style="margin-top: 25%; width:fit-content; height:fit-content; margin-left:25%;">
+                            <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)" style="font-size:12pt;">SAVE</button>
+                            <button type="button" class="buttondanger rounded" ng-disabled="!vm.isRemovalAllowed" ng-click="vm.delete(cs)">Delete</button>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <div>
+                        @*THUMBNAI*@
+                        <span style="display:block;">Thumbnail:</span>
+                        <p style="font-size:8pt;">
+                            Select or upload a picture that shows what's in your video.
+                            A good thumbnail stands out and draws viewers' attention.
+                        </p>
+                        @*YOUR THUMBNAIL HERE.*@
+                        <div style="width:100%">
+
+                        </div>
+                    </div>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</body>
+
+
+<div id="myModal" class="modal rounded">
+  <div class="modal-content">
+    <div class="row">
+
+      <div class="col">
+            <span style="float:left;"><strong>FILENAME HERE</strong></span>
+      </div>
+
+      <div class="col">  
+            <span class="close" style="margin-top:-10px; margin-bottom:0px;">&times;</span>
+      </div>
+
+      <hr />
+    </div>
+   @*BODY HERE*@
+   @*CONTAINER 1*@
+   <div id="modal-content1" class="mx-auto" style="width:100%; height:100%;">
+       <br />
+       <br />
+       <br />
+
+       <div class="rounded" style="background-color:#adf295; width:150px; height:110px; display: block; margin-left: auto; margin-right: auto;">
+           <img src="~/images/upload-icon.svg" style="width:100px; height:100px; display: block; margin-left: auto; margin-right: auto;" />
+       </div>
+
+      <div style="text-align:center; margin-top:50px;">
+          <h4><strong>Drag and drop video File to upload</strong></h4>
+          <h6>You can browse your video manualy.</h6>
+          <br />
+          <button id="selectfile" class="butttonprimary rounded" style="border:none;">
+              S E L E C T  F I L E
+          </button>
+      </div>
+      <br />
+      <br />
+      <br />
+      <br />
+   </div>
+   @*CONTAINER 2*@
+     <div id="modal-content2" class="mx-auto" style="width:100%; height:100%;">
+            <div class="row" style="width:100%; height:100%; padding:5px;">
+                <div class="col container ">
+
+                    <div class="container" style="margin-top:10px;">
+                        <h4><strong>Details</strong></h4>
+                    </div>
+
+                    <div class="container">
+                        <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                            <span style="display:block;">Title:</span>
+                            <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
+                            <br />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="container">
+                        <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                            <span style="display:block;">Description:</span>
+                            <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
+                            <br />
+                        </div>
+                    </div>
+                    <br />
+
+                    <div class="container">
+                        @*THUMBNAI*@
+                        <span style="display:block;">Thumbnail:</span>
+                        <p style="font-size:8pt;">
+                            Select or upload a picture that shows what's in your video.
+                            A good thumbnail stands out and draws viewers' attention.
+                        </p>
+                        @*YOUR THUMBNAIL HERE.*@
+                        <div style="width:100%">
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="text-align:center;">
+                        <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:100%; height:100%;"></video>
+                    </div>
+                    <div style="margin-top:5px;">
+                        <span style="display:block; margin-bottom:0px;">Filename</span>
+                        <span style="top:-50px"><strong>FILENAME HERE</strong></span>
+                    </div>
+                </div>
+            </div>
+   </div>
+  </div>
 </div>
 
+
+@*<div id="QRCodeModal" class="modal" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="padding: 1em;">
+            <div class="modal-header">
+                <h4 class="modal-title custom-fonts">Student QrCode</h4>
+            </div>
+
+            <div class="modal-body">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal" style="align-self:center; font-size:12pt; width: 120px; height: 40px; transition-duration: 0.5s;">Close</button>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+@section Scripts{
+    @*<script src="~/script/uploadscript.js" asp-append-version="true"></script>*@
+    <script>
+
+        var content1 = document.getElementById("modal-content1");
+        var content2 = document.getElementById("modal-content2");
+        var modal = document.getElementById("myModal");
+        var btn = document.getElementById("myBtn");
+        var span = document.getElementsByClassName("close")[0];
+        var selectFile = document.getElementById("selectfile");
+
+        
+
+        selectFile.onclick = function (){
+            //content1.style.display="none";
+            //alert("hello");
+            content1.style.display = "none";
+            content2.style.display = "block";
+        }
+
+
+  
+        btn.onclick = function () {
+            modal.style.display = "block";
+            content1.style.display = "block";
+            content2.style.display = "none";
+        }
+
+  
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+}
 
 

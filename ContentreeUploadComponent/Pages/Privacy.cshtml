@@ -113,3 +113,64 @@
     </div>
 
 </div>
+<br />
+<br />
+<br />
+<br>
+<div class="" style="width:100%; height:100%;">
+    <div class="" style="margin-top:15px;">
+        <span style="font-size:20pt;"><strong>FILENAME HERE.</strong></span>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="container" style="margin-top:10px;">
+                <h4><strong>Details</strong></h4>
+            </div>
+            <div class="container">
+                <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                    <span style="display:block; font-size:14pt;">Title:</span>
+                    <input ng-model="cs.title" ng-disabled="!cs.isEditMode" style="width:100%; border:0px;" required />
+                    <br />
+                </div>
+            </div>
+            <br />
+            <div class="container">
+                <div class="rounded activateHover" style="border:1px solid gray; width:100%;  height:fit-content; padding:5px; padding-left: 10px;">
+                    <span style="display:block; font-size:14pt;">Description:</span>
+                    <textarea ng-model="cs.description" ng-disabled="!cs.isEditMode" style="width:100%; height:50%; border:0px;" placeholder="Tell us about your video"></textarea>
+                    <br />
+                </div>
+            </div>
+            <br />
+            <div class="container">
+                @*THUMBNAI*@
+                <span style="display:block;">Thumbnail:</span>
+                <span style="font-size:8pt;">
+                    Select or upload a picture that shows what's in your video.
+                    A good thumbnail stands out and draws viewers' attention.
+                </span>
+                @*YOUR THUMBNAIL HERE.*@
+                <div style="width:100%">
+
+                </div>
+            </div>
+        </div>
+        <div class="col" style="">
+            <div style="padding-top: 20px; width:100%;">
+                <video ng-src="{{cs.videoUrl}}" preload="none" controls style="outline:none; width:100%; height:350px;"></video>
+            </div>
+            <div style="margin-top:5px; width:100%;">
+                <span style="display:block; margin-bottom:0px;">Filename</span>
+                <span style="top:-50px"><strong>FILENAME HERE</strong></span>
+            </div>
+            <br />
+        </div>
+       <br />
+       <br />
+       <hr />
+        <div class="container" style="text-align:right; padding-right: 40px;">
+            <button type="button" class="butttonprimary rounded" ng-click="vm.editSave(cs, $event)" style="font-size:12pt;">SAVE</button>
+        </div>
+       
+    </div>
+</div>

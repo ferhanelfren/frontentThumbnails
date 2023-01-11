@@ -1,14 +1,19 @@
 {
   "version": 2,
-  "dgSpecHash": "MwzFwWwN8PgbAesnkifPlcnLje1i0yBakYPQHr3ilur/d87KjzhdWSPbRNbwglAMCv2/pByGxR7raa/zPWpBPA==",
+  "dgSpecHash": "Zr7Yg/lQqBNt4daB/HPTrQ7W46tKdGn2rd/sS3clo7zN8SOAKDUdubBgjWXsyLbC0M8JW1qWJLWsQT6qWi0eXg==",
   "success": true,
   "projectFilePath": "C:\\Users\\ferha\\source\\repos\\ContentreeUploadComponent\\ContentreeUploadComponent\\ContentreeUploadComponent.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ferha\\.nuget\\packages\\angularjs\\1.8.2\\angularjs.1.8.2.nupkg.sha512",
     "C:\\Users\\ferha\\.nuget\\packages\\angularjs.animate\\1.8.2\\angularjs.animate.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.cookies\\1.8.2\\angularjs.cookies.1.8.2.nupkg.sha512",
     "C:\\Users\\ferha\\.nuget\\packages\\angularjs.core\\1.8.2\\angularjs.core.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.loader\\1.8.2\\angularjs.loader.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.locale\\1.8.2\\angularjs.locale.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.resource\\1.8.2\\angularjs.resource.1.8.2.nupkg.sha512",
     "C:\\Users\\ferha\\.nuget\\packages\\angularjs.route\\1.8.2\\angularjs.route.1.8.2.nupkg.sha512",
-    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.sanitize\\1.8.2\\angularjs.sanitize.1.8.2.nupkg.sha512"
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.sanitize\\1.8.2\\angularjs.sanitize.1.8.2.nupkg.sha512",
+    "C:\\Users\\ferha\\.nuget\\packages\\angularjs.touch\\1.8.2\\angularjs.touch.1.8.2.nupkg.sha512"
   ],
   "logs": []
 }

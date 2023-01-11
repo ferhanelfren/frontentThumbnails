@@ -49,7 +49,23 @@
               "target": "Package",
               "version": "[1.8.2, )"
             },
+            "AngularJS.Cookies": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
             "AngularJS.Core": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
+            "AngularJS.Loader": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
+            "AngularJS.Locale": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
+            "AngularJS.Resource": {
               "target": "Package",
               "version": "[1.8.2, )"
             },
@@ -58,6 +74,10 @@
               "version": "[1.8.2, )"
             },
             "AngularJS.Sanitize": {
+              "target": "Package",
+              "version": "[1.8.2, )"
+            },
+            "AngularJS.Touch": {
               "target": "Package",
               "version": "[1.8.2, )"
             },

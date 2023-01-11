@@ -9,9 +9,14 @@
       "ContentreeUploadComponent/1.0.0": {
         "dependencies": {
           "AngularJS.Animate": "1.8.2",
+          "AngularJS.Cookies": "1.8.2",
           "AngularJS.Core": "1.8.2",
+          "AngularJS.Loader": "1.8.2",
+          "AngularJS.Locale": "1.8.2",
+          "AngularJS.Resource": "1.8.2",
           "AngularJS.Route": "1.8.2",
           "AngularJS.Sanitize": "1.8.2",
+          "AngularJS.Touch": "1.8.2",
           "angularjs": "1.8.2"
         },
         "runtime": {
@@ -24,13 +29,38 @@
           "AngularJS.Core": "1.8.2"
         }
       },
+      "AngularJS.Cookies/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
       "AngularJS.Core/1.8.2": {},
+      "AngularJS.Loader/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
+      "AngularJS.Locale/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
+      "AngularJS.Resource/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
       "AngularJS.Route/1.8.2": {
         "dependencies": {
           "AngularJS.Core": "1.8.2"
         }
       },
       "AngularJS.Sanitize/1.8.2": {
+        "dependencies": {
+          "AngularJS.Core": "1.8.2"
+        }
+      },
+      "AngularJS.Touch/1.8.2": {
         "dependencies": {
           "AngularJS.Core": "1.8.2"
         }
@@ -57,12 +87,40 @@
       "path": "angularjs.animate/1.8.2",
       "hashPath": "angularjs.animate.1.8.2.nupkg.sha512"
     },
+    "AngularJS.Cookies/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8ZajXqvQ5Xmd8KMO1xtpecM0AMFcElamszVEIY1MFOC/9LX+2jkIduHdnl6cfPiDnbDqbvzWwWEXinfO7b0HcQ==",
+      "path": "angularjs.cookies/1.8.2",
+      "hashPath": "angularjs.cookies.1.8.2.nupkg.sha512"
+    },
     "AngularJS.Core/1.8.2": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-XqWsLLPPF8KDFYbVPbtpbae1claPLcjyxZgYThdXQri3I2O8SDdMzNafnhIi9nGgg3X6zsu1W0Qj0u5p1wr5mA==",
       "path": "angularjs.core/1.8.2",
       "hashPath": "angularjs.core.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Loader/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Qaxa98BwzYq4b+IQ6pyaadkgQuIuCH8zMwyAdlFnIpQyj11i1SGu1ZtNKfUR9Dsm38vW4pNmoVtcpNKXSK5uDg==",
+      "path": "angularjs.loader/1.8.2",
+      "hashPath": "angularjs.loader.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Locale/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m+e39aOEDjVgMMcsZbP9fVDDNnoiTcPNPCioqsMm7W2dYj7Uw+3uyjPYwXtu0bV20yhD2vGJCSfFg3QqAkaSDw==",
+      "path": "angularjs.locale/1.8.2",
+      "hashPath": "angularjs.locale.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Resource/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QFD5tfR4HDRQOCHzLWfeeMzgC1etKyf9DMhJjZ33XMJ0err8hapweXkAs2iaxkcocF7lkAS/7Dqi3St85Tjfvw==",
+      "path": "angularjs.resource/1.8.2",
+      "hashPath": "angularjs.resource.1.8.2.nupkg.sha512"
     },
     "AngularJS.Route/1.8.2": {
       "type": "package",
@@ -77,6 +135,13 @@
       "sha512": "sha512-DpWPMwWlBcxq1+fo24AyzW0/X+A9L5UpCVIWZ1hBodkKbikLZPOPLtfag8WTZci++S+qaPVuPKICbzQVtSuAIg==",
       "path": "angularjs.sanitize/1.8.2",
       "hashPath": "angularjs.sanitize.1.8.2.nupkg.sha512"
+    },
+    "AngularJS.Touch/1.8.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zZYl26nZ5Mp0F64ajCQcM0IUTGo1wXuVYSNqeKgGsoXozmTOQ5SqHRrhFowq8Sz6fhJWZcitTG6rRtN4URoHfQ==",
+      "path": "angularjs.touch/1.8.2",
+      "hashPath": "angularjs.touch.1.8.2.nupkg.sha512"
     }
   }
 }
